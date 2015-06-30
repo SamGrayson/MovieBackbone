@@ -15,8 +15,12 @@ var PostCollection = Backbone.Collection.extend({
   url: 'http://tiy-fee-rest.herokuapp.com/collections/movies10'
 });
 
+////////////// Server Manipulation ///////////////
+
 var collect = new PostCollection();
 collect.fetch();
+
+///////////// Updates Server with Movie Data Array //////////////
 
 function updateServer() {
   console.log(collect.length);
@@ -48,6 +52,8 @@ function loopServer() {
     }
 }
 
+///////// Delete Stuff /////////
+
 function deletePost() {
   var movieTitle = prompt('Title of your deletion?')
   var posttoDelete = collect.findWhere({title: movieTitle})
@@ -58,3 +64,11 @@ function whichDeletePost(posttoDelete) {
   var movie = posttoDelete
   movie.destroy();
 }
+
+///////// Delete All ///////////
+
+function deleteAll() {
+  _.each(_.clone(collect.models), function(model) {
+    model.destroy();
+  })
+};
