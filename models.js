@@ -52,6 +52,24 @@ function loopServer() {
     }
 }
 
+function changeTitle() {
+  var movie = prompt('What movie do you want to change?');
+  var newTitle = prompt('What should the title be?');
+  var titleToChange = collect.findWhere({title: movie});
+  console.log(titleToChange.attributes);
+  titleToChange.set({title: newTitle});
+  titleToChange.save();
+}
+
+function changeRating() {
+  var movie = prompt('What movie do you want to change?');
+  var newRating = prompt('What should the rating be?');
+  var ratingToChange = collect.findWhere({title: movie});
+  console.log(ratingToChange.attributes);
+  ratingToChange.set({rating: newRating});
+  ratingToChange.save();
+}
+
 ///////// Delete Stuff /////////
 
 function deletePost() {
