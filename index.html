@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <script type="text/template" id="postTmpl">
+  <div class="content">
+    <div class="contentWrap">
+      <div class="movieCover">
+        <img src='<%= url %>' alt="">
+      </div>
+      <div class="movieInfo">
+        <li><h1><%= title %></h1></li>
+        <li><h2><%= release %></h2></li>
+        <li><h2>rating: <%= rating %><h2></li>
+        <li><p><%= plot %></p></li>
+      </div>
+    </div>
+  </div>
+  </script>
+</head>
+<body>
+
+<div class="pageWrapper">
+<div class="topPage">
+  <h1> The Overly Honest Critic </h1>
+  <div class="sort">
+    <a href="#movies"><div class="sortButton" id="titleSort">title</div><a>
+    <a href="#movies"><div class="sortButton" id="highestSort">Highest Rated</div><a>
+    <a href="#movies"><div class="sortButton" id="lowestSort">Lowest Rated</div><a>
+  </div>
+</div>
+<div class="movies" id="movies">
+</div>
+</div>
+
+
+<!-- Scripts -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/backbone/backbone.js"></script>
+
+<script src="app.js"></script>
+<script src="models.js"></script>
+<script src="view.js"></script>
+</body>
+</html>

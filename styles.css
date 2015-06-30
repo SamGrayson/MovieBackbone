@@ -1,0 +1,203 @@
+
+html {
+  max-width: 1200px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+a:hover {
+  color: darkred;
+}
+
+.pageWrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('movietheaterseats.jpg');
+              background-attachment: fixed;
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+
+/*****************************/
+/*        Top Page          */
+/***************************/
+
+.topPage {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('movietheaterseats.jpg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.topPage h1 {
+  font-size: 12vw;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.sort {
+  margin-bottom: 150px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
+  height: 50px;
+}
+
+.sortButton {
+  height: 20px;
+  width: 100px;
+  text-align: center;
+}
+
+.sortButton:hover {
+  cursor: pointer;
+  color: darkred;
+}
+
+
+/*****************************/
+/*         Content          */
+/***************************/
+
+.content {
+  height: 100vh;
+  width: 100vw;
+  border-bottom: 2px solid gray;
+  color: black;
+}
+
+.contentWrap {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-color: whitesmoke;
+}
+
+.movieCover {
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+}
+
+.movieCover img {
+  height: 100%;
+  width: 100%;
+}
+
+.movieImage {
+  height: 100%;
+  width: 100%;
+/*   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            url('jurrassicworld.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%; */
+}
+
+.movieInfo {
+  float: right;
+  width: 55%;
+  height: 100%;
+  margin-right: 10px;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.movieInfo h1 {
+  margin-bottom: 50px;
+  text-decoration: none;
+  font-size: 4em;
+}
+
+.movieInfo h2 {
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+.movieInfo p {
+  margin-top: 25px;
+  font-size: 1.2em;
+}
+
+.emptyDiv {
+  height: 400px;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.2);
+}
