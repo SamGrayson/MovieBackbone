@@ -72,12 +72,15 @@ a:hover {
 
 .topPage h1 {
   font-size: 12vw;
-  margin-bottom: 50px;
   text-align: center;
 }
 
+.topPage p {
+  margin-bottom: 50px;
+}
+
 .sort {
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -87,10 +90,8 @@ a:hover {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;
+  -webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;
   width: 450px;
   height: 50px;
 }
@@ -119,6 +120,11 @@ a:hover {
 .sortButton:hover {
   cursor: pointer;
   color: darkred;
+}
+
+#highestSort {
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 
@@ -216,4 +222,9 @@ background-position: 50% 50%; */
   height: 400px;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+#movies {
+  height: 0;
+  width: 0;
 }
