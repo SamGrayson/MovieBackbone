@@ -147,10 +147,24 @@ a {
   font-size: 1.2em;
   color: lightgray;
   position: absolute;
-  right: 20px;
+  right: 40px;
   top: 25px;
 }
 .close:hover {
+  color: darkred;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.home {
+  font-size: 1.2em;
+  color: lightgray;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+
+.home:hover {
   color: darkred;
   font-size: 1.3em;
   cursor: pointer;

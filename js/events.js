@@ -20,6 +20,7 @@ module.exports = Backbone.View.extend({
     'click .coverHover' : 'loadDetail',
     'click .start': 'openForm',
     'click .close': 'destroyMovie',
+    'click .home' : 'goHome',
     'click .closeForm' : 'closeForm',
     'click .up' : 'clickUp',
     'click .down' : 'clickDown',
@@ -176,10 +177,17 @@ module.exports = Backbone.View.extend({
 
   loadDetail: function(e) {
     e.preventDefault();
+    $('.topPage').addClass('hidden');
+    $('.footer').addClass('hidden');
     var id = $(e.currentTarget).attr('data-id');
     console.log(id);
     var detail = new DetailView(id);
     detail.navigate('movie/'+id, true);
+  },
+
+  goHome: function()  {
+    var detail = new DetailView();
+    detail.navigate('home', true);
   },
 
   clickUp: function() {

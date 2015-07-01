@@ -21,15 +21,15 @@ module.exports = Backbone.Router.extend({
     $('#movies').css('height', '100%');
     $('#movies').css('width', '100vw');
     $('.movies').html('');
-    $('.footer').removeClass('hidden');
     var movie = new Model({_id: movieId});
     movie.fetch().then(function () {
       var movieView = new DetailView({model: movie});
       $('.movies').html(movieView.render().el);
+      $('.footer').removeClass('hidden');
     });
   },
-  phoneHome: function (e) {
-    e.preventDefault();
+  phoneHome: function () {
+    $('.topPage').removeClass('hidden');
     $('.movies').html('');
     $('.footer').addClass('hidden');
     $('#movies').css('height', '0');
