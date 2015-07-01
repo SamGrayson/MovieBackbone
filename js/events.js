@@ -18,7 +18,14 @@ module.exports = Backbone.View.extend({
     'click #submitForm': 'addButtonLoad',
     'click .start': 'openForm',
     'click .close': 'destroyMovie',
-    'click .closeForm' : 'closeForm'
+    'click .closeForm' : 'closeForm',
+    'click .up' : 'clickUp',
+    'click .down' : 'clickDown',
+    'click .right' : 'clickRight',
+    'click .left' : 'clickLeft',
+    'click .a' : 'clickA',
+    'click .b' : 'clickB',
+    'click .select' : 'clickSelect',
   },
 
   remove: function(e){
@@ -139,8 +146,12 @@ module.exports = Backbone.View.extend({
 },
 
   openForm: function () {
-    $('.formWrapper').removeClass('hidden');
-    $('.close').removeClass('hidden');
+    var stringy = JSON.stringify(["up", "down", "left", "right", "a", "b"]);
+    var codeStringy = JSON.stringify(window.codeArray);
+    if(codeStringy === stringy) {
+      $('.formWrapper').removeClass('hidden');
+      $('.close').removeClass('hidden');
+    }
   },
 
   destroyMovie: function(e) {
@@ -159,6 +170,34 @@ module.exports = Backbone.View.extend({
     $('.formWrapper').addClass('hidden');
     $('.close').addClass('hidden');
     console.log('hi');
+  },
+
+  clickUp: function() {
+    window.codeArray.push('up');
+  },
+
+  clickDown: function() {
+    window.codeArray.push('down');
+  },
+
+  clickLeft: function() {
+    window.codeArray.push('left');
+  },
+
+  clickRight: function() {
+    window.codeArray.push('right');
+  },
+
+  clickA: function() {
+    window.codeArray.push('a');
+  },
+
+  clickB: function() {
+    window.codeArray.push('b');
+  },
+
+  clickSelect: function() {
+    window.codeArray = [];
   }
 
 })
