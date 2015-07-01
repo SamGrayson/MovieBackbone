@@ -1,0 +1,30 @@
+{
+  "name": "backbone-imdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "backbone": "^1.2.1",
+    "browserify": "^10.2.4",
+    "jquery": "^2.1.4",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "serve": "^1.4.0"
+  },
+  "scripts": {
+    "start": "npm run bundled && node_modules/.bin/serve",
+    "bundled": "node_modules/.bin/browserify js/app.js -o bundled.js -d",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamGrayson/MovieBackbone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamGrayson/MovieBackbone/issues"
+  },
+  "homepage": "https://github.com/SamGrayson/MovieBackbone#readme"
+}

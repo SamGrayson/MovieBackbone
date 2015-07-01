@@ -5,10 +5,14 @@
   <title>Document</title>
   <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script type="text/template" id="postTmpl">
   <div class="content">
     <div class="contentWrap">
+      <div class="close hidden">
+        <span id="invisText"><%=title%></span>
+        <i class="fa fa-bomb"></i>
+      </div>
       <div class="movieCover">
         <img src='<%= url %>' alt="">
       </div>
@@ -21,12 +25,46 @@
     </div>
   </div>
   </script>
+  <script type="text/template" id="formTmpl">
+   <form action="">
+     <div class="labelBlock">
+       <label for="title">Title</label>
+     </div>
+     <div class="inputBlock">
+       <input type="text" name="title">
+     </div>
+     <div class="labelBlock">
+       <label for="poster">Poster Url</label>
+     </div>
+     <div class="inputBlock">
+       <input type="text" name="url">
+     </div>
+     <div class="labelBlock">
+       <label for="year">Relase</label>
+     </div>
+     <div class="inputBlock">
+       <input type="text" name="release">
+     </div>
+     <div class="labelBlock">
+       <label for="score">Rating</label>
+     </div>
+     <div class="inputBlock">
+       <input type="text" name="score">
+     </div>
+     <label for="plot" id="plotLabel">Plot</label>
+     <textarea name="plot" id="plotText"></textarea>
+     <button id="submitForm" type="submit">Add</button>
+     <button id="submitEdit" type="button">Submit Changes</button>
+   </form>
+ </script>
+
 </head>
 <body>
 
 <div class="pageWrapper">
 <div class="topPage">
-  <h1> The Overly Honest Critic </h1>
+  <h1> The Honestly Simple Critic </h1>
+  <p> (made with backbone) </p>
   <div class="sort">
     <a href="#movies"><div class="sortButton" id="titleSort">title</div><a>
     <a href="#movies"><div class="sortButton" id="highestSort">Highest Rated</div><a>
@@ -35,16 +73,33 @@
 </div>
 <div class="movies" id="movies">
 </div>
+<div class="footer hidden">
+  <div class="controllerWrap">
+    <div class="up"></div>
+    <div class="right"></div>
+    <div class="down"></div>
+    <div class="left"></div>
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="start"></div>
+    <img src="nintendoController.png" alt="" id="controller" style="width: 300px, height:100px">
+    <span id="signature">by: Sam Grayson</span>
+  </div>
+</div>
+<div class="formWrapper hidden">
+     <h3>Add New Movie</h3>
+     <div class="closeForm">
+       <i class="fa fa-times"></i>
+     </div>
+<div class="form">
+
+</div>
+</div>
 </div>
 
 
 <!-- Scripts -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/underscore/underscore.js"></script>
-<script src="bower_components/backbone/backbone.js"></script>
 
-<script src="app.js"></script>
-<script src="models.js"></script>
-<script src="view.js"></script>
+<script type="text/javascript" src="bundled.js"></script>
 </body>
 </html>
