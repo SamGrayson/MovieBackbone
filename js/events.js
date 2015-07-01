@@ -6,16 +6,19 @@ var PostCollectionView = require('./view');
 Backbone.$ = $;
 
 module.exports = Backbone.View.extend({
-  el: '.sort',
+  el: '.pageWrapper',
   events: {
     "click #titleSort": "sortTitle" , // <--------------- Events to add to your page... (<event> <class to do event> : <function on event>)
     'click #highestSort': 'sortHighest',
-    'click #lowestSort': 'sortLowest'
+    'click #lowestSort': 'sortLowest',
+    'click #submitForm': 'addButtonLoad',
+    'click .start': 'openForm'
   },
   sortTitle: function(event) {
     $('.movies').html('');
-    $('#movies').css('height', '100vh');
-    $('#movies').css('width', '100vh');
+    $('#movies').css('height', '100%');
+    $('#movies').css('width', '100vw');
+    $('.footer').addClass('hidden');
 
     var collect = new PostCollection();
     collect.fetch().then(function(){
@@ -31,12 +34,14 @@ module.exports = Backbone.View.extend({
       var myCollectionTitle = new PostCollection(sortedTitle);
 
       collectionView = new PostCollectionView({collection: myCollectionTitle});
+      $('.footer').removeClass('hidden');
     });
   },
   sortHighest: function(event) {
     $('.movies').html('');
-    $('#movies').css('height', '100vh');
+    $('#movies').css('height', '100%');
     $('#movies').css('width', '100vh');
+    $('.footer').addClass('hidden');
 
     var collect = new PostCollection();
     collect.fetch().then(function(){
@@ -52,12 +57,14 @@ module.exports = Backbone.View.extend({
     var myCollectionHigh = new PostCollection(sortedHigh);
 
     collectionView = new PostCollectionView({collection: myCollectionHigh});
+    $('.footer').removeClass('hidden');
   });
   },
   sortLowest: function(event) {
     $('.movies').html('');
-    $('#movies').css('height', '100vh');
+    $('#movies').css('height', '100%');
     $('#movies').css('width', '100vh');
+    $('.footer').addClass('hidden');
 
     var collect = new PostCollection();
     collect.fetch().then(function(){
@@ -73,6 +80,30 @@ module.exports = Backbone.View.extend({
     var myCollectionLow = new PostCollection(sortedLow);
 
     collectionView = new PostCollectionView({collection: myCollectionLow});
+    $('.footer').removeClass('hidden');
   });
+},
+
+  addButtonLoad: function (event) {
+    $('.movies').html('');
+    $('#movies').css('height', '100%');
+    $('#movies').css('width', '100vh');
+    $('.footer').addClass('hidden');
+
+    var collect = new PostCollection();
+    collect.fetch().then(function(){
+    var model = collect.models;
+
+    var myCollection = new PostCollection(model);
+
+    collectionView = new PostCollectionView({collection: myCollection});
+    $('.footer').removeClass('hidden');
+    $('.formWrapper').addClass('hidden');
+  });
+},
+
+  openForm: function () {
+    $('.formWrapper').removeClass('hidden');
   }
+
 })

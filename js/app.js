@@ -3,7 +3,11 @@ var PostCollectionView = require('./view');
 var $ = require('jquery');
 var PostCollection = require ('./models');
 var PostView = require ('./modelView');
-var Events = require ('./events')
+var Events = require ('./events');
+var Forms = require ('./formView');
+var Backbone = require ('backbone');
+var _ = require ('underscore');
+var PostModel = require ('./model');
 
 var movieData = [
   {
@@ -53,6 +57,10 @@ var movieData = [
 
 
 module.exports = $(function() {
+
+  var collection = new PostCollection();
+
+  var newForms = new Forms();
 
   var newEvents = new Events();
 
