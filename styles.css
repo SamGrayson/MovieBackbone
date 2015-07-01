@@ -186,6 +186,11 @@ a {
           align-items: center;
 }
 
+.coverHover:hover {
+  cursor: pointer;
+  box-shadow:10px 0px 10px 0px rgba(129, 14, 14, 0.7);
+}
+
 .movieCover img {
   height: 100%;
   width: 100%;

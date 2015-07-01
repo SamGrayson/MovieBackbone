@@ -13,11 +13,11 @@
         <span id="invisText"><%=title%></span>
         <i class="fa fa-bomb"></i>
       </div>
-      <div class="movieCover">
+      <div class="movieCover coverHover" data-id=<%= _id %>>
         <img src='<%= url %>' alt="">
       </div>
       <div class="movieInfo">
-        <li><h1><%= title %></h1></li>
+        <li id="movieTop"><h1><%= title %></h1></li>
         <li><h2><%= release %></h2></li>
         <li><h2>rating: <%= rating %><h2></li>
         <li><p><%= plot %></p></li>
