@@ -30,7 +30,10 @@ module.exports = Backbone.View.extend({
       rating: this.$el.find('input[name="score"]').val(),
       release: this.$el.find('input[name="release"]').val(),
       url: this.$el.find('input[name="url"]').val(),
-      plot: this.$el.find('textarea[name="plot"]').val()
+      plot: this.$el.find('textarea[name="plot"]').val(),
+      actors: this.$el.find('input[name="actors"]').val(),
+      rated: this.$el.find('input[name="rated"]').val(),
+      genre: this.$el.find('textarea[name="genre"]').val()
     });
     this.model.save();
   //  this.collect.add(this.model); // <------ VAT IS DIZ

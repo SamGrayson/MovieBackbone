@@ -25,6 +25,26 @@
     </div>
   </div>
   </script>
+  <script type="text/template" id="detailTmpl">
+  <div class="content">
+    <div class="contentWrap">
+      <div class="close hidden">
+        <span id="invisText"><%=title%></span>
+        <i class="fa fa-bomb"></i>
+      </div>
+      <div class="movieCover">
+        <img src='<%= url %>' alt="">
+      </div>
+      <div class="movieInfo">
+        <li><h1><%= title %></h1></li>
+        <li><h2><%= release %></h2></li>
+        <li><h2>rating: <%= rating %><h2></li>
+        <li><p><%= plot %></p></li>
+        <li id="bottomInfo"><p><%= genre %></p><p>Actors: <%= actors %></p><p>Rated: <%=rated%></p></li>
+      </div>
+    </div>
+  </div>
+  </script>
   <script type="text/template" id="formTmpl">
    <form action="">
      <div class="labelBlock">
@@ -51,6 +71,24 @@
      <div class="inputBlock">
        <input type="text" name="score">
      </div>
+     <div class="labelBlock">
+       <label for="text">Genre</label>
+     </div>
+     <div class="inputBlock">
+       <input type="text" name="genre">
+     </div>
+     <div class="labelBlock">
+       <label for="text">Actors</label>
+     </div>
+     <div class="inputBlock">
+       <input type="text" name="actors">
+     </div>
+     <div class="labelBlock">
+     <label for="score">Rated</label>
+     </div>
+     <div class="inputBlock">
+       <input type="text" name="rated">
+     </div>
      <label for="plot" id="plotLabel">Plot</label>
      <textarea name="plot" id="plotText"></textarea>
      <button id="submitForm" type="submit">Add</button>
@@ -64,7 +102,7 @@
 <div class="pageWrapper">
 <div class="topPage">
   <h1> The Honestly Simple Critic </h1>
-  <p> (made with backbone) </p>
+  <p> (made with backbone & browserify) </p>
   <div class="sort">
     <a href="#movies"><div class="sortButton" id="titleSort">title</div><a>
     <a href="#movies"><div class="sortButton" id="highestSort">Highest Rated</div><a>

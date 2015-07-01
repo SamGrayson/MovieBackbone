@@ -251,6 +251,10 @@ background-position: 50% 50%; */
   width: 0;
 }
 
+#bottomInfo {
+  margin-top: 25px;
+}
+
 
 /*****************************/
 /*         Footer           */
@@ -311,6 +315,8 @@ background-position: 50% 50%; */
 #signature:hover {
   color: white;
 }
+
+
 
 
 /*****************************/
@@ -385,7 +391,7 @@ background-position: 50% 50%; */
 
 .formWrapper {
   background-color: black;
-  height: 60vh;
+  height: 80vh;
   width: 100vw;
   position: relative;
 }
