@@ -153,6 +153,7 @@ a {
 .close:hover {
   color: darkred;
   font-size: 1.3em;
+  cursor: pointer;
 }
 
 .hide {
@@ -374,6 +375,7 @@ background-position: 50% 50%; */
   background-color: black;
   height: 60vh;
   width: 100vw;
+  position: relative;
 }
 
 .formWrapper h3 {
@@ -461,4 +463,17 @@ textarea {
   width: 50%;
   height: 25px;
   margin-top: 20px;
+}
+
+.closeForm {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  color: lightgray;
+  font-size: 1.2em;
+}
+
+.closeForm:hover {
+  color:darkred;
+  cursor: pointer;
 }

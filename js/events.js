@@ -7,14 +7,49 @@ Backbone.$ = $;
 
 module.exports = Backbone.View.extend({
   el: '.pageWrapper',
+  initialize: function() {
+    this.listenTo(this.collection, 'update', this.reload);
+    this.listenTo(this.model, 'destroy', this.delete);
+  },
   events: {
     "click #titleSort": "sortTitle" , // <--------------- Events to add to your page... (<event> <class to do event> : <function on event>)
     'click #highestSort': 'sortHighest',
     'click #lowestSort': 'sortLowest',
     'click #submitForm': 'addButtonLoad',
     'click .start': 'openForm',
-    'click .close': 'destroyMovie'
+    'click .close': 'destroyMovie',
+    'click .closeForm' : 'closeForm'
   },
+
+  remove: function(e){
+    this.$el.remove();
+  },
+
+  delete: function() {
+    this.model.destroy();
+    console.log('am I working?');
+  },
+
+  reload: function(e) {
+    e.preventDefault;
+    var collect = new PostCollection();
+    collect.fetch().then(function(){
+      var titleArray = [];
+      var model = collect.models;
+
+      _.each(model, function(el){
+        titleArray.push(el.attributes);
+      })
+
+      var sortedTitle = _.sortBy(titleArray, 'title');
+
+      var myCollectionTitle = new PostCollection(sortedTitle);
+
+      collectionView = new PostCollectionView({collection: myCollectionTitle});
+      $('.footer').removeClass('hidden');
+    });
+  },
+
   sortTitle: function(event) {
     $('.movies').html('');
     $('#movies').css('height', '100%');
@@ -117,6 +152,13 @@ module.exports = Backbone.View.extend({
       movieToDestroy.destroy();
       $('.movies').html('');
     });
+  },
+
+  closeForm: function(e) {
+    e.preventDefault();
+    $('.formWrapper').addClass('hidden');
+    $('.close').addClass('hidden');
+    console.log('hi');
   }
 
 })

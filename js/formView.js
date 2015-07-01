@@ -56,7 +56,6 @@ module.exports = Backbone.View.extend({
     $('.form').find('input').val('');
     $('.form').find('textarea').val('');
     });
-
-  }
+  },
 
 });
