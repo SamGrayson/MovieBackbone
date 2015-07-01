@@ -8,7 +8,10 @@ module.exports = Backbone.Router.extend({
   routes: {
     "": "alertme",
     "movie/:id": "detailView",
-    "home" : "phoneHome"
+    "home" : "phoneHome",
+    "form" : "formPage",
+    "aboutme" : "aboutPage",
+    "contact" : "contactPage",
   },
   alertme: function (stuff){
     console.log(stuff);
@@ -32,7 +35,33 @@ module.exports = Backbone.Router.extend({
     $('.topPage').removeClass('hidden');
     $('.movies').html('');
     $('.footer').addClass('hidden');
+    $('.formWrapper').addClass('hidden');
+    $('.aboutMe').addClass('hidden');
+    $('.contact').addClass('hidden');
     $('#movies').css('height', '0');
     $('#movies').css('width', '0');
+  },
+  formPage: function() {
+    var stringy = JSON.stringify(["up", "down", "left", "right", "a", "b"]);
+    var codeStringy = JSON.stringify(window.codeArray);
+    if(codeStringy === stringy) {
+      $('.formWrapper').removeClass('hidden');
+      $('.close').removeClass('hidden');
+      window.codeArray = [];
+    } else {
+      window.codeArray = [];
+    }
+  },
+  aboutPage: function() {
+    $('.aboutMe').removeClass('hidden');
+    $('.footer').addClass('hidden');
+    $('.formWrapper').addClass('hidden');
+    $('.topPage').addClass('hidden');
+    $('#movies').css('height', '0');
+    $('#movies').css('width', '0');
+    $('.movies').html('');
+  },
+  contactPage: function() {
+
   }
 });
