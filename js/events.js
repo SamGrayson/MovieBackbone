@@ -8,8 +8,8 @@ Backbone.$ = $;
 module.exports = Backbone.View.extend({
   el: '.pageWrapper',
   initialize: function() {
-    this.listenTo(this.collection, 'update', this.reload);
-    this.listenTo(this.model, 'destroy', this.delete);
+    this.listenTo(movies.collection, 'update', movies.reload);
+    this.listenTo(movies.model, 'destroy', movies.delete);
   },
   events: {
     "click #titleSort": "sortTitle" , // <--------------- Events to add to your page... (<event> <class to do event> : <function on event>)
