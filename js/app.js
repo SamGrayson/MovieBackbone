@@ -8,6 +8,8 @@ var Forms = require ('./formView');
 var Backbone = require ('backbone');
 var _ = require ('underscore');
 var PostModel = require ('./model');
+var Router = require('./router');
+Backbone.$ = $;
 
 var movieData = [
   {
@@ -64,6 +66,10 @@ module.exports = $(function() {
 
   var newEvents = new Events();
 
+  new Router();
+
+  Backbone.history.start(); // <---------- Tells the router to start working with the app.
+
 //  var myCollection = new PostCollection(movieData);
 
 
@@ -73,6 +79,8 @@ module.exports = $(function() {
 */
 
   ////////////// Server Manipulation ///////////////
+
+  window.codeArray = [];
 
   var collect = new PostCollection();
   collect.fetch();
