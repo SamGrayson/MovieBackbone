@@ -12,7 +12,8 @@ module.exports = Backbone.View.extend({
     'click #highestSort': 'sortHighest',
     'click #lowestSort': 'sortLowest',
     'click #submitForm': 'addButtonLoad',
-    'click .start': 'openForm'
+    'click .start': 'openForm',
+    'click .close': 'destroyMovie'
   },
   sortTitle: function(event) {
     $('.movies').html('');
@@ -104,6 +105,18 @@ module.exports = Backbone.View.extend({
 
   openForm: function () {
     $('.formWrapper').removeClass('hidden');
+    $('.close').removeClass('hidden');
+  },
+
+  destroyMovie: function(e) {
+    e.preventDefault();
+    var name = $(e.currentTarget).find('span').html();
+    var collect = new PostCollection();
+    collect.fetch().then(function(){
+      var movieToDestroy = collect.findWhere({title: name})
+      movieToDestroy.destroy();
+      $('.movies').html('');
+    });
   }
 
 })

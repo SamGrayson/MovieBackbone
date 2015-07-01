@@ -132,6 +132,10 @@ a {
 /*         Content          */
 /***************************/
 
+#invisText {
+  display: none;
+}
+
 .content {
   height: 100vh;
   width: 100vw;
@@ -139,7 +143,24 @@ a {
   color: black;
 }
 
+.close {
+  font-size: 1.2em;
+  color: lightgray;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+.close:hover {
+  color: darkred;
+  font-size: 1.3em;
+}
+
+.hide {
+  display: none;
+}
+
 .contentWrap {
+  position: relative;
   height: 100%;
   width: 100%;
   margin: 0 auto;
