@@ -44,6 +44,7 @@ a {
 }
 
 .contact {
+  position: relative;
   height: 100vh;
   width: 30%;
   float:left;
@@ -67,6 +68,19 @@ a {
   -ms-flex-direction: column;
           flex-direction: column;
   color: rgb(215, 215, 215)
+}
+
+.closeContactButton {
+  position: absolute;
+  font-size: 1.2em;
+  color: lightgray;
+  right: 25px;
+  top: 25px;
+}
+
+.closeContactButton:hover {
+  cursor: pointer;
+  color: darkred;
 }
 
 .contact h1 {

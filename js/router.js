@@ -11,7 +11,7 @@ module.exports = Backbone.Router.extend({
     "home" : "phoneHome",
     "form" : "formPage",
     "aboutme" : "aboutPage",
-    "contact" : "contactPage",
+    "contact" : "contactPage"
   },
   alertme: function (stuff){
     console.log(stuff);
@@ -60,8 +60,13 @@ module.exports = Backbone.Router.extend({
     $('#movies').css('height', '0');
     $('#movies').css('width', '0');
     $('.movies').html('');
+    $('.contact').addClass('hidden');
+    $('.about').css('width', '100%');
+    $('textWrapShadow').css('width', '60%');
   },
   contactPage: function() {
-
+    $('.about').css('width', '70%');
+    $('.textWrapShadow'). css ('width', '80%');
+    $('.contact').removeClass('hidden');
   }
 });

@@ -24,6 +24,7 @@ module.exports = Backbone.View.extend({
     'click #contactButton' : 'openContact',
     'click .aboutOpen' : 'openAbout',
     'click .closeForm' : 'closeForm',
+    'click .closeContactButton' : 'closeContact',
     'click .up' : 'clickUp',
     'click .down' : 'clickDown',
     'click .right' : 'clickRight',
@@ -171,6 +172,12 @@ module.exports = Backbone.View.extend({
   closeForm: function() {
     var detail = new DetailView();
     detail.navigate('home', true);
+  },
+
+  closeContact: function() {
+    console.log("I'm working");
+    var detail = new DetailView();
+    detail.navigate('aboutme', true);
   },
 
   loadDetail: function(e) {
