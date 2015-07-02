@@ -33,7 +33,7 @@ module.exports = Backbone.View.extend({
       plot: this.$el.find('textarea[name="plot"]').val(),
       actors: this.$el.find('input[name="actors"]').val(),
       rated: this.$el.find('input[name="rated"]').val(),
-      genre: this.$el.find('textarea[name="genre"]').val()
+      genre: this.$el.find('input[name="genre"]').val()
     });
     this.model.save();
   //  this.collect.add(this.model); // <------ VAT IS DIZ
@@ -52,7 +52,10 @@ module.exports = Backbone.View.extend({
       url: $('.form').find('input[name="url"]').val(),
       plot: $('.form').find('textarea[name="plot"]').val(),
       release: $('.form').find('input[name="release"]').val(),
-      rating: $('.form').find('input[name="score"]').val()
+      rating: $('.form').find('input[name="score"]').val(),
+      genre: $('.form').find('input[name="genre"]').val(),
+      actors: $('.form').find('input[name="actors"]').val(),
+      rated: $('.form').find('input[name="rated"]').val()
     });
     movieToEdit.save();
     console.log(movieToEdit);

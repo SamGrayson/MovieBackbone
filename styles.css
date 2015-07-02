@@ -122,11 +122,11 @@ a {
 }
 
 .image {
-  height: 325px;
-  width: 325px;
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
   border-bottom: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.4)),
               url('https://scontent.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/1170941_10153147953050118_660518333_n.jpg?oh=3a551fb1200658a13f94202134aa097d&oe=562DD535');
   background-color: rgba(255, 255, 255, 0.9);

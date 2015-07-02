@@ -166,6 +166,8 @@ module.exports = Backbone.View.extend({
       $('.movies').html('');
       $('.formWrapper').addClass('hidden');
       $('.clear').addClass('hidden');
+      var detail = new DetailView();
+      detail.navigate('home', true);
     });
   },
 
