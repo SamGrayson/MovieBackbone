@@ -44,7 +44,7 @@ a {
 }
 
 .contact {
-  position: relative;
+  position: fixed;
   height: 100vh;
   width: 30%;
   float:left;
@@ -711,4 +711,81 @@ textarea {
 .closeForm:hover {
   color:darkred;
   cursor: pointer;
+}
+
+
+/*****************************/
+/*       Responsified       */
+/***************************/
+
+
+@media screen and (max-width: 800px) {
+
+  .movieCover {
+    width: 55%;
+  }
+
+  .movieInfo {
+    width: 40%;
+  }
+
+  .movieInfo h1 {
+    font-size: 3em;
+  }
+
+  .movieInfo h2 {
+    font-size: 1.8em;
+  }
+
+  .contact {
+    height: 47vh;
+    width: 100%;
+  }
+
+  .about {
+    width: 100%:
+  }
+
+  .textWrapShadow {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .sortButton {
+    height: 40px;
+    width: 100px;
+    font-size: .8em;
+  }
+
+  #highestSort {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .what {
+    width: 90%;
+    height: 50%;
+  }
+
+  .who {
+    width: 90%;
+    height: 30%;
+  }
+
+  .image {
+    height: 200px;
+    width: 200px;
+    background-position: 35% 15%;
+  }
+
+  .textWrapShadow {
+    height: 400px;
+  }
+
+  .textWrap {
+    height: 350px;
+  }
 }

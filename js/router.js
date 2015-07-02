@@ -65,8 +65,6 @@ module.exports = Backbone.Router.extend({
     $('textWrapShadow').css('width', '60%');
   },
   contactPage: function() {
-    $('.about').css('width', '70%');
-    $('.textWrapShadow'). css ('width', '80%');
     $('.contact').removeClass('hidden');
   }
 });
