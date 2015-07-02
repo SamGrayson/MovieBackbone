@@ -13,6 +13,28 @@
         <span id="invisText"><%=title%></span>
         <i class="fa fa-bomb"></i>
       </div>
+      <div class="movieCover coverHover" data-id=<%= _id %>>
+        <img src='<%= url %>' alt="">
+      </div>
+      <div class="movieInfo">
+        <li id="movieTop"><h1><%= title %></h1></li>
+        <li><h2><%= release %></h2></li>
+        <li><h2>rating: <%= rating %><h2></li>
+        <li><p><%= plot %></p></li>
+      </div>
+    </div>
+  </div>
+  </script>
+  <script type="text/template" id="detailTmpl">
+  <div class="content">
+    <div class="contentWrap">
+      <div class="close hidden">
+        <span id="invisText"><%=title%></span>
+        <i class="fa fa-bomb"></i>
+      </div>
+      <div class="home">
+        <i class="fa fa-home"></i>
+      </div>
       <div class="movieCover">
         <img src='<%= url %>' alt="">
       </div>
@@ -21,6 +43,7 @@
         <li><h2><%= release %></h2></li>
         <li><h2>rating: <%= rating %><h2></li>
         <li><p><%= plot %></p></li>
+        <li id="bottomInfo"><p><%= genre %></p><p>Actors: <%= actors %></p><p>Rated: <%=rated%></p></li>
       </div>
     </div>
   </div>
@@ -51,6 +74,24 @@
      <div class="inputBlock">
        <input type="text" name="score">
      </div>
+     <div class="labelBlock">
+       <label for="text">Genre</label>
+     </div>
+     <div class="inputBlock">
+       <input type="text" name="genre">
+     </div>
+     <div class="labelBlock">
+       <label for="text">Actors</label>
+     </div>
+     <div class="inputBlock">
+       <input type="text" name="actors">
+     </div>
+     <div class="labelBlock">
+     <label for="score">Rated</label>
+     </div>
+     <div class="inputBlock">
+       <input type="text" name="rated">
+     </div>
      <label for="plot" id="plotLabel">Plot</label>
      <textarea name="plot" id="plotText"></textarea>
      <button id="submitForm" type="submit">Add</button>
@@ -62,13 +103,54 @@
 <body>
 
 <div class="pageWrapper">
+<div class="aboutMe hidden">
+    <div class="home">
+      <i class="fa fa-home"></i>
+    </div>
+    <div class = "contact hidden">
+      <div class="closeContactButton">
+        <i class="fa fa-times"></i>
+      </div>
+      <h1><i><u>Don't be shy!</u></i></h1>
+      <h2><i>email</i></h2>
+      <blockquote>samuel.c.grayson17@gmail.com</blockquote>
+      <h2><i>number</i></h2>
+      <blockquote>678-294-8443</blockquote>
+    </div>
+    <div class = "about">
+      <div class = "image">
+      </div>
+      <div class="textWrapShadow">
+      <div class="textWrap">
+        <div class = "who">
+          <h2> Who am I? </h2>
+          <blockquote>
+            Just your averge everyday coder/movie buff that hates long reviews!
+          </blockquote>
+        </div>
+        <div class = "what">
+          <h2> What is this? </h2>
+          <blockquote>
+            <i>"Straight and to the point"...</i> That is arguably the best way to reach people. The goal of this blog is to give you simple and honest reviews under 140 characters of movies currently in theaters.
+          </blockquote>
+        </div>
+      </div>
+      <div class = "contactButton">
+        <p id="contactButton"> contact me </p>
+      </div>
+    </div>
+    </div>
+</div>
 <div class="topPage">
   <h1> The Honestly Simple Critic </h1>
-  <p> (made with backbone) </p>
+  <p> (made with backbone & browserify) </p>
   <div class="sort">
     <a href="#movies"><div class="sortButton" id="titleSort">title</div><a>
     <a href="#movies"><div class="sortButton" id="highestSort">Highest Rated</div><a>
     <a href="#movies"><div class="sortButton" id="lowestSort">Lowest Rated</div><a>
+  </div>
+  <div class="aboutOpen">
+    <p><i><u>about me</u></i><p>
   </div>
 </div>
 <div class="movies" id="movies">
@@ -88,13 +170,15 @@
   </div>
 </div>
 <div class="formWrapper hidden">
+  <div class="wrapper">
      <h3>Add New Movie</h3>
      <div class="closeForm">
        <i class="fa fa-times"></i>
-     </div>
-<div class="form">
+      </div>
+      <div class="form">
 
-</div>
+      </div>
+  </div>
 </div>
 </div>
 

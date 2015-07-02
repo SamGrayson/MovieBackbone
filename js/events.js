@@ -3,6 +3,7 @@ var $ = require('jquery');
 var _ = require ('underscore');
 var PostCollection = require ('./models')
 var PostCollectionView = require('./view');
+var DetailView = require('./router');
 Backbone.$ = $;
 
 module.exports = Backbone.View.extend({
@@ -16,9 +17,14 @@ module.exports = Backbone.View.extend({
     'click #highestSort': 'sortHighest',
     'click #lowestSort': 'sortLowest',
     'click #submitForm': 'addButtonLoad',
+    'click .coverHover' : 'loadDetail',
     'click .start': 'openForm',
     'click .close': 'destroyMovie',
+    'click .home' : 'goHome',
+    'click #contactButton' : 'openContact',
+    'click .aboutOpen' : 'openAbout',
     'click .closeForm' : 'closeForm',
+    'click .closeContactButton' : 'closeContact',
     'click .up' : 'clickUp',
     'click .down' : 'clickDown',
     'click .right' : 'clickRight',
@@ -146,12 +152,8 @@ module.exports = Backbone.View.extend({
 },
 
   openForm: function () {
-    var stringy = JSON.stringify(["up", "down", "left", "right", "a", "b"]);
-    var codeStringy = JSON.stringify(window.codeArray);
-    if(codeStringy === stringy) {
-      $('.formWrapper').removeClass('hidden');
-      $('.close').removeClass('hidden');
-    }
+    var detail = new DetailView();
+    detail.navigate('form', true);
   },
 
   destroyMovie: function(e) {
@@ -162,14 +164,45 @@ module.exports = Backbone.View.extend({
       var movieToDestroy = collect.findWhere({title: name})
       movieToDestroy.destroy();
       $('.movies').html('');
+      $('.formWrapper').addClass('hidden');
+      $('.clear').addClass('hidden');
     });
   },
 
-  closeForm: function(e) {
+  closeForm: function() {
+    var detail = new DetailView();
+    detail.navigate('home', true);
+  },
+
+  closeContact: function() {
+    console.log("I'm working");
+    var detail = new DetailView();
+    detail.navigate('aboutme', true);
+  },
+
+  loadDetail: function(e) {
     e.preventDefault();
-    $('.formWrapper').addClass('hidden');
-    $('.close').addClass('hidden');
-    console.log('hi');
+    $('.topPage').addClass('hidden');
+    $('.footer').addClass('hidden');
+    var id = $(e.currentTarget).attr('data-id');
+    console.log(id);
+    var detail = new DetailView(id);
+    detail.navigate('movie/'+id, true);
+  },
+
+  goHome: function()  {
+    var detail = new DetailView();
+    detail.navigate('home', true);
+  },
+
+  openAbout: function() {
+    var detail = new DetailView();
+    detail.navigate('aboutme', true);
+  },
+
+  openContact: function() {
+    var detail = new DetailView();
+    detail.navigate('contact', true);
   },
 
   clickUp: function() {

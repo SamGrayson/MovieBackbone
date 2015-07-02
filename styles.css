@@ -24,11 +24,174 @@ a {
               background-attachment: fixed;
               background-repeat: no-repeat;
               background-position: center center;
-              background-size: cover;
+              background-attachment: fixed;
   height: 100%;
   width: 100%;
 }
 
+
+/*****************************/
+/*        Top Page          */
+/***************************/
+
+.aboutMe {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),
+              url('http://12995ab74234cecffcfe-5f2fa7a96e75253446fc15d02ff0d202.r74.cf3.rackcdn.com/content/uploads/2014/10/Front2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact {
+  position: relative;
+  height: 100vh;
+  width: 30%;
+  float:left;
+  background-color: rgba(125, 39, 39, 0.9);
+  font-family: 'Lato', sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+          flex-direction: column;
+  color: rgb(215, 215, 215)
+}
+
+.closeContactButton {
+  position: absolute;
+  font-size: 1.2em;
+  color: lightgray;
+  right: 25px;
+  top: 25px;
+}
+
+.closeContactButton:hover {
+  cursor: pointer;
+  color: darkred;
+}
+
+.contact h1 {
+  font-size: 2.2em;
+  margin-bottom: 50px;
+}
+
+.contact h2 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.contact blockquote {
+  margin-bottom: 25px;
+  font-size: 1em;
+}
+
+.about {
+  height: 100vh;
+  width: 100%;
+  float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.image {
+  height: 325px;
+  width: 325px;
+  border-radius: 50%;
+  border-bottom: 50px;
+  margin-bottom: 50px;
+  background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.4)),
+              url('https://scontent.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/1170941_10153147953050118_660518333_n.jpg?oh=3a551fb1200658a13f94202134aa097d&oe=562DD535');
+  background-color: rgba(255, 255, 255, 0.9);
+  background-position: 21% 15%;
+  box-shadow: 6px 10px 40px black;
+}
+
+.textWrap {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-family: 'Lato', sans-serif;
+}
+
+.textWrapShadow {
+  height: 350px;
+  width:60%;
+  box-shadow: 6px 10px 40px black;
+}
+
+.textWrap h2 {
+  font-size: 1.5em;
+}
+
+.who {
+  width: 90%;
+  height: 40%;
+}
+
+.what {
+  width: 90%;
+  height: 40%;
+}
+
+.contactButton {
+  width: 100%;
+  height: 50px;
+  text-decoration: underline;
+  border-top: 2px solid gray;
+  font-weight: 200;
+  font-style: italic;
+  font-family: 'Lato', sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#contactButton:hover {
+  color: darkred;
+  cursor: pointer;
+}
 
 /*****************************/
 /*        Top Page          */
@@ -127,6 +290,19 @@ a {
   margin-right: 40px;
 }
 
+.aboutOpen {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.aboutOpen:hover {
+  cursor: pointer;
+}
+
 
 /*****************************/
 /*         Content          */
@@ -147,10 +323,24 @@ a {
   font-size: 1.2em;
   color: lightgray;
   position: absolute;
-  right: 20px;
+  right: 40px;
   top: 25px;
 }
 .close:hover {
+  color: darkred;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.home {
+  font-size: 1.2em;
+  color: lightgray;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+
+.home:hover {
   color: darkred;
   font-size: 1.3em;
   cursor: pointer;
@@ -184,6 +374,11 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
           align-items: center;
+}
+
+.coverHover:hover {
+  cursor: pointer;
+  box-shadow:10px 0px 10px 0px rgba(129, 14, 14, 0.7);
 }
 
 .movieCover img {
@@ -251,6 +446,10 @@ background-position: 50% 50%; */
   width: 0;
 }
 
+#bottomInfo {
+  margin-top: 25px;
+}
+
 
 /*****************************/
 /*         Footer           */
@@ -311,6 +510,8 @@ background-position: 50% 50%; */
 #signature:hover {
   color: white;
 }
+
+
 
 
 /*****************************/
@@ -385,9 +586,31 @@ background-position: 50% 50%; */
 
 .formWrapper {
   background-color: black;
-  height: 60vh;
+  height: 80vh;
   width: 100vw;
   position: relative;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .formWrapper h3 {
