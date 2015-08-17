@@ -9,5 +9,5 @@ var array = [];
 
 module.exports = Backbone.Collection.extend({
   model: PostModel,
-  url: 'http://samtinyserver.heroku.com/collections/backboneimdb'
+  url: 'http://samtinyserver.heroku.com/collections/backboneimdb2'
 });

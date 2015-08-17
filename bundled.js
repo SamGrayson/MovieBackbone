@@ -517,7 +517,7 @@ Backbone.$ = $;
 
 module.exports = Backbone.Model.extend({
 
-  urlRoot: 'http://samtinyserver.heroku.com/collections/backboneimdb',
+  urlRoot: 'http://samtinyserver.heroku.com/collections/backboneimdb2',
   idAttribute: '_id',
   initialize: function() {
     console.log('adding movie')
@@ -558,7 +558,7 @@ var array = [];
 
 module.exports = Backbone.Collection.extend({
   model: PostModel,
-  url: 'http://samtinyserver.heroku.com/collections/backboneimdb'
+  url: 'http://samtinyserver.heroku.com/collections/backboneimdb2'
 });
 
 },{"./model":5,"./modelView":6,"backbone":10,"jquery":11}],8:[function(require,module,exports){

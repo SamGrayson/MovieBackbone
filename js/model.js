@@ -4,7 +4,7 @@ Backbone.$ = $;
 
 module.exports = Backbone.Model.extend({
 
-  urlRoot: 'http://samtinyserver.heroku.com/collections/backboneimdb',
+  urlRoot: 'http://samtinyserver.heroku.com/collections/backboneimdb2',
   idAttribute: '_id',
   initialize: function() {
     console.log('adding movie')
