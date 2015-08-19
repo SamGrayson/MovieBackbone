@@ -22,7 +22,7 @@ module.exports = Backbone.Router.extend({
     var movieId = id;
     console.log(movieId);
     $('#movies').css('height', '100%');
-    $('#movies').css('width', '100vw');
+     
     $('.movies').html('');
     var movie = new Model({_id: movieId});
     movie.fetch().then(function () {

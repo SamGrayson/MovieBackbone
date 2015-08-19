@@ -1,44 +1,55 @@
+
 html {
-  max-width: 1200px; }
+  max-width: 1200px;
+}
 
 body {
   margin: 0;
   height: 100%;
-  width: 100%;
-  padding: 0; }
+  width :100%;
+  padding: 0;
+}
 
-h1, h2, h3, h4, p {
+h1,h2,h3,h4,p {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 a {
   text-decoration: none;
-  color: whitesmoke; }
+  color: whitesmoke;
+}
 
 .pageWrapper {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("movietheaterseats.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('movietheaterseats.jpg');
+              background-attachment: fixed;
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-attachment: fixed;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+}
+
 
 /*****************************/
 /*        Top Page          */
 /***************************/
+
 .aboutMe {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("http://12995ab74234cecffcfe-5f2fa7a96e75253446fc15d02ff0d202.r74.cf3.rackcdn.com/content/uploads/2014/10/Front2.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),
+              url('http://12995ab74234cecffcfe-5f2fa7a96e75253446fc15d02ff0d202.r74.cf3.rackcdn.com/content/uploads/2014/10/Front2.jpg');
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+}
 
 .contact {
   position: fixed;
   height: 100vh;
   width: 30%;
-  float: left;
+  float:left;
   background-color: rgba(125, 39, 39, 0.9);
   font-family: 'Lato', sans-serif;
   display: -webkit-box;
@@ -48,40 +59,46 @@ a {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
+          align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column;
-  color: #d7d7d7; }
+          flex-direction: column;
+  color: rgb(215, 215, 215)
+}
 
 .closeContactButton {
   position: absolute;
   font-size: 1.2em;
   color: lightgray;
   right: 25px;
-  top: 25px; }
+  top: 25px;
+}
 
 .closeContactButton:hover {
   cursor: pointer;
-  color: darkred; }
+  color: darkred;
+}
 
 .contact h1 {
   font-size: 2.2em;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+}
 
 .contact h2 {
   font-size: 1.5em;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+}
 
 .contact blockquote {
   margin-bottom: 25px;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 .about {
   height: 100vh;
@@ -94,16 +111,17 @@ a {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
+          align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
+          flex-direction: column;
+}
 
 .image {
   height: 300px;
@@ -111,10 +129,12 @@ a {
   border-radius: 50%;
   border-bottom: 50px;
   margin-bottom: 25px;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url("https://scontent.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/1170941_10153147953050118_660518333_n.jpg?oh=3a551fb1200658a13f94202134aa097d&oe=562DD535");
+  background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.4)),
+              url('https://scontent.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/1170941_10153147953050118_660518333_n.jpg?oh=3a551fb1200658a13f94202134aa097d&oe=562DD535');
   background-color: rgba(255, 255, 255, 0.9);
   background-position: 21% 15%;
-  box-shadow: 6px 10px 40px black; }
+  box-shadow: 6px 10px 40px black;
+}
 
 .textWrap {
   height: 300px;
@@ -124,23 +144,28 @@ a {
   justify-content: center;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.9);
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+}
 
 .textWrapShadow {
   height: 350px;
-  width: 60%;
-  box-shadow: 6px 10px 40px black; }
+  width:60%;
+  box-shadow: 6px 10px 40px black;
+}
 
 .textWrap h2 {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+}
 
 .who {
   width: 90%;
-  height: 40%; }
+  height: 40%;
+}
 
 .what {
   width: 90%;
-  height: 40%; }
+  height: 40%;
+}
 
 .contactButton {
   width: 100%;
@@ -157,22 +182,26 @@ a {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
+          align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.9); }
+          justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
 
 #contactButton:hover {
   color: darkred;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 /*****************************/
 /*        Top Page          */
 /***************************/
+
 .topPage {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("movietheaterseats.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('movietheaterseats.jpg');
   height: 100vh;
   width: 100vw;
   background-size: cover;
@@ -189,27 +218,31 @@ a {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
+          justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
+          flex-direction: column;
+}
 
 .topPage a:hover {
   color: darkred;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 .topPage h1 {
   font-size: 12vw;
-  text-align: center; }
+  text-align: center;
+}
 
 .topPage p {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+}
 
 .sort {
   margin-bottom: 50px;
@@ -221,17 +254,12 @@ a {
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+          flex-direction: row;
+  -webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;
+  -webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;
   width: 450px;
-  height: 50px; }
+  height: 50px;
+}
 
 .sortButton {
   height: 40px;
@@ -247,76 +275,90 @@ a {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
+          align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+          justify-content: center;
+}
 
 .sortButton:hover {
   cursor: pointer;
-  color: darkred; }
+  color: darkred;
+}
 
 #highestSort {
   margin-left: 40px;
-  margin-right: 40px; }
+  margin-right: 40px;
+}
 
 .aboutOpen {
   -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 .aboutOpen:hover {
-  cursor: pointer; }
+  cursor: pointer;
+}
+
 
 /*****************************/
 /*         Content          */
 /***************************/
+
 #invisText {
-  display: none; }
+  display: none;
+}
 
 .content {
   height: 100vh;
   width: 100vw;
   border-bottom: 1px solid gray;
-  color: black; }
+  color: black;
+}
 
 .close {
   font-size: 1.2em;
   color: lightgray;
   position: absolute;
   right: 40px;
-  top: 25px; }
-
+  top: 25px;
+}
 .close:hover {
   color: darkred;
   font-size: 1.3em;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .home {
   font-size: 1.2em;
   color: lightgray;
   position: absolute;
   right: 20px;
-  top: 25px; }
+  top: 25px;
+}
 
 .home:hover {
   color: darkred;
   font-size: 1.3em;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .hide {
-  display: none; }
+  display: none;
+}
 
 .contentWrap {
   position: relative;
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+}
 
 .movieCover {
   float: left;
@@ -329,28 +371,32 @@ a {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
+          justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+          align-items: center;
+}
 
 .coverHover:hover {
   cursor: pointer;
-  box-shadow: 10px 0px 10px 0px rgba(129, 14, 14, 0.7); }
+  box-shadow:10px 0px 10px 0px rgba(129, 14, 14, 0.7);
+}
 
 .movieCover img {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+}
 
 .movieImage {
   height: 100%;
   width: 100%;
-  /*   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url('jurrassicworld.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%; */ }
+/*   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            url('jurrassicworld.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%; */
+}
 
 .movieInfo {
   float: right;
@@ -371,40 +417,49 @@ a {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  font-family: 'Lato', sans-serif; }
+          justify-content: center;
+  font-family: 'Lato', sans-serif;
+}
 
 .movieInfo h1 {
   margin-bottom: 50px;
   text-decoration: none;
-  font-size: 4em; }
+  font-size: 4em;
+}
 
 .movieInfo h2 {
   margin-bottom: 25px;
-  font-size: 2em; }
+  font-size: 2em;
+}
 
 .movieInfo p {
   margin-top: 25px;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 .emptyDiv {
   height: 400px;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
 #movies {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+}
 
 #bottomInfo {
-  margin-top: 25px; }
+  margin-top: 25px;
+}
+
 
 /*****************************/
 /*         Footer           */
 /***************************/
+
 .footer {
   width: 100vw;
-  height: 100px;
+  height:100px;
   background-color: black;
   display: -webkit-box;
   display: -webkit-flex;
@@ -413,11 +468,12 @@ a {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
+          align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+          justify-content: center;
+}
 
 .controllerWrap {
   position: relative;
@@ -430,102 +486,112 @@ a {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
+          align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+          justify-content: center;
+  -webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;
+}
 
 .hidden {
-  display: none; }
+  display: none;
+}
 
 .controllerWrap img {
   height: 75px;
-  width: 150px; }
+  width: 150px;
+}
 
 #signature {
   font-style: italic;
   font-weight: 200;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+}
 
 #signature:hover {
-  color: white; }
+  color: white;
+}
+
+
+
 
 /*****************************/
 /*       Controller         */
 /***************************/
+
 .codeButton:hover {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .up {
   position: absolute;
   left: 99px;
   top: 31px;
   height: 10px;
-  width: 10px; }
-
+  width: 10px;
+}
 .right {
   left: 107px;
   top: 40px;
   position: absolute;
   height: 10px;
-  width: 10px; }
-
+  width: 10px;
+}
 .down {
   left: 99px;
   top: 51px;
   position: absolute;
   height: 10px;
-  width: 10px; }
-
+  width: 10px;
+}
 .left {
   left: 91px;
   top: 41px;
   position: absolute;
   height: 10px;
-  width: 10px; }
-
+  width: 10px;
+}
 .a {
   right: 106px;
   top: 44px;
   position: absolute;
   height: 20px;
-  width: 20px; }
-
+  width: 20px;
+}
 .b {
   right: 86px;
   top: 44px;
   position: absolute;
   height: 20px;
-  width: 20px; }
-
+  width: 20px;
+}
 .start {
   right: 130px;
   top: 48px;
   position: absolute;
   height: 10px;
-  width: 20px; }
+  width: 20px;
+}
 
 .select {
   right: 150px;
   top: 48px;
   position: absolute;
   height: 10px;
-  width: 20px; }
+  width: 20px;
+}
 
 /*****************************/
 /*           Form           */
 /***************************/
+
 .formWrapper {
   background-color: black;
   height: 80vh;
   width: 100vw;
-  position: relative; }
+  position: relative;
+}
 
 .wrapper {
   height: 100%;
@@ -537,20 +603,22 @@ a {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
+          align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
+          flex-direction: column;
+}
 
 .formWrapper h3 {
   text-align: center;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+}
 
 .form {
   background-color: black;
@@ -564,11 +632,12 @@ a {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
+          justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+          align-items: center;
+}
 
 form {
   color: black;
@@ -580,155 +649,205 @@ form {
   flex-direction: row;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+          flex-wrap: wrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+}
 
 .labelBlock {
   height: 50px;
   width: 20%;
-  margin-left: 50px;
+  margin-left:50px;
   font-size: 1.2em;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+}
 
 .inputBlock {
   height: 50px;
-  width: 70%; }
+  width: 70%;
+}
 
 input {
   height: 30px;
-  width: 80%; }
+  width: 80%;
+}
 
 #plotLabel {
-  font-size: 1.2em;
+  font-size:1.2em;
   font-family: 'Lato', sans-serif;
   width: 20%;
   height: 50px;
-  margin-left: 50px; }
+  margin-left: 50px;
+}
 
 #plotText {
-  width: 56%; }
+  width: 56%;
+}
 
 textarea {
-  resize: none; }
+  resize: none;
+}
 
 #submitForm {
   width: 50%;
   height: 25px;
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
 #submitEdit {
   width: 50%;
   height: 25px;
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
 .closeForm {
   position: absolute;
   right: 20px;
   top: 25px;
   color: lightgray;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 .closeForm:hover {
-  color: darkred;
-  cursor: pointer; }
+  color:darkred;
+  cursor: pointer;
+}
+
 
 /*****************************/
 /*       Responsified       */
 /***************************/
+
+
 @media screen and (max-width: 800px) {
+
   .movieCover {
-    width: 55%; }
+    width: 55%;
+  }
 
   .movieInfo {
-    width: 40%; }
+    width: 40%;
+  }
 
   .movieInfo h1 {
-    font-size: 3em; }
+    font-size: 3em;
+  }
 
   .movieInfo h2 {
-    font-size: 1.8em; }
+    font-size: 1.8em;
+  }
 
   .contact {
     height: 47vh;
-    width: 100%; }
+    width: 100%;
+  }
 
   .about {
-    width: 100%; }
+    width: 100%;
+  }
 
   .textWrapShadow {
-    width: 80%; } }
+    width: 80%;
+  }
+
+}
+
 @media screen and (max-width: 520px) {
+
   .contentWrap {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    height: none; }
+    height: none;
+  }
 
   .movieCover {
-    width: 100%; }
+    width: 100%;
+  }
 
   .movieInfo {
     width: 100%;
-    padding: 25px; }
+    padding: 25px;
+  }
 
   .movies {
-    width: 100%; }
+    width: 100%;
+  }
 
-  .movies div {
-    width: 100%; }
+  .movies {
+    div {
+      width: 100%;
+    }
+  }
 
   .content {
-    height: inherit; }
+    height: inherit;
+  }
 
   .sort {
     width: 100%;
-    height: 50px; }
+    height: 50px;
+  }
 
   .sortButton {
     height: 40px;
     width: 90px;
-    font-size: .8em; }
+    font-size: .8em;
+  }
 
   .aboutMe {
-    height: 110vh; }
+    height: 110vh;
+  }
 
   .textWrapShadow {
-    height: 400px; }
+    height: 400px;
+  }
 
   .textWrap {
-    height: 400px; } }
+    height: 400px;
+  }
+
+}
+
 @media screen and (max-width: 400px) {
+
   .sortButton {
     height: 40px;
     width: 100px;
-    font-size: .8em; }
+    font-size: .8em;
+  }
 
   #highestSort {
     margin-left: 10px;
-    margin-right: 10px; }
+    margin-right: 10px;
+  }
 
   .what {
     width: 90%;
-    height: 50%; }
+    height: 50%;
+  }
 
   .who {
     width: 90%;
     height: 30%;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+  }
 
   .image {
     height: 200px;
     width: 200px;
-    background-position: 35% 15%; }
+    background-position: 35% 15%;
+  }
 
   .textWrapShadow {
-    height: 425px; }
+    height: 425px;
+  }
 
   .textWrap {
-    height: 425px; } }
+    height: 425px;
+  }
 
-/*# sourceMappingURL=styles.css.map */
+}

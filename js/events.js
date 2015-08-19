@@ -66,7 +66,7 @@ module.exports = Backbone.View.extend({
   sortTitle: function(event) {
     $('.movies').html('');
     $('#movies').css('height', '100%');
-    $('#movies').css('width', '100vw');
+     
     $('.footer').addClass('hidden');
 
     var collect = new PostCollection();
@@ -89,7 +89,7 @@ module.exports = Backbone.View.extend({
   sortHighest: function(event) {
     $('.movies').html('');
     $('#movies').css('height', '100%');
-    $('#movies').css('width', '100vh');
+    $('#movies').css('width', '100vw');
     $('.footer').addClass('hidden');
 
     var collect = new PostCollection();
@@ -112,7 +112,7 @@ module.exports = Backbone.View.extend({
   sortLowest: function(event) {
     $('.movies').html('');
     $('#movies').css('height', '100%');
-    $('#movies').css('width', '100vh');
+    $('#movies').css('width', '100vw');
     $('.footer').addClass('hidden');
 
     var collect = new PostCollection();
@@ -136,7 +136,7 @@ module.exports = Backbone.View.extend({
   addButtonLoad: function (event) {
     $('.movies').html('');
     $('#movies').css('height', '100%');
-    $('#movies').css('width', '100vh');
+    $('#movies').css('width', '100vw');
     $('.footer').addClass('hidden');
 
     var collect = new PostCollection();
